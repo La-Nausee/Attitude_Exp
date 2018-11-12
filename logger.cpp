@@ -283,8 +283,10 @@ void adis_setup()
 		printf("[ERROR] Unable to setup ADIS ISR.\r\n");
 	}
 
-	//software reset
-        //adis_global_cmd(1<<7);
+	software reset
+        adis_global_cmd(1<<7);
+	
+	sleep(1);
 
         //factory calibration restore,clear all calibration register = 0
         //adis_global_cmd(1<<1);
